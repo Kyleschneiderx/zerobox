@@ -1,0 +1,39 @@
+{
+  "name": "zerobox",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run server\"  \"npm run client\" ",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyleschneiderx/zerobox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kyleschneiderx/zerobox/issues"
+  },
+  "homepage": "https://github.com/Kyleschneiderx/zerobox#readme",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.2.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.5",
+    "nodemailer": "^6.6.5",
+    "nodemon": "^2.0.12",
+    "qs": "^6.7.0",
+    "react-router-dom": "^5.3.0",
+    "xoauth2": "^1.2.0"
+  }
+}
